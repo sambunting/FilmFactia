@@ -1,0 +1,20 @@
+<h1>UNAMED MOVIE WEBSITE</h1>
+
+<p>This is a website which I have spent a whole evening on. At the moment, it only shows popular movies, so it obviously needs to more work on it. I'm just happy that I have managed to make something in Node.js if I'm being honest.</p>
+
+<h3>Popular Movies</h3>
+<div id="popularMovies">
+	<div class="slidee">
+		{{#each films}}
+			<li class="poster">
+				<img src="http://image.tmdb.org/t/p/w185/{{this.poster_path}}">
+			</li>
+		{{else}}
+			<p>List is empty</p>
+		{{/each}}
+	</div>
+</div>
+
+<div class="scrollbar" id="popularMoviesScrollbar">
+    <div class="handle"></div>
+</div>
