@@ -1,3 +1,7 @@
+header {
+	padding: 20px;
+}
+
 main {
 	padding: 20px;
 }
@@ -6,19 +10,19 @@ footer {
 	text-align: center;
 }
 
-#popularMovies { 
+#popularMovies, #newMovies { 
 	width: 100%; 
 	padding: 0; 
 }
 
-#popularMovies .slidee { 
+#popularMovies .slidee, #newMovies .slidee { 
 	margin: 0; 
 	padding: 0; 
 	height: 100%; 
 	list-style: none;
 }
 
-#popularMovies .slidee li { 
+#popularMovies .slidee li, #newMovies .slidee li { 
 	float: left; 
 	margin: 0 5px 0 0; 
 	padding: 0; 
