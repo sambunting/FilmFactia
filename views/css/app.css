@@ -1,5 +1,26 @@
 header {
-	padding: 20px;
+	background-color: rgba(33, 33, 33, 0.8);
+	color: #ffffff;
+}
+
+header h2 {
+	margin: 0;
+}
+
+header form input {
+	margin-top: 9px !important;
+	margin-bottom: 0 !important;
+
+	color: #ffffff !important;
+	background-color: rgba(0,0,0,0) !important; 
+	background: rgba(0,0,0,0) !important;
+	border: none !important;
+	border-bottom: 3px solid #ffffff !important;
+	box-shadow: none !important;
+}
+
+header form input:focus {
+	box-shadow: none !important;
 }
 
 main {
@@ -39,4 +60,20 @@ footer {
     width: 100px; /* overriden if dynamicHandle: 1 */
     height: 100%;
     background: #222;
+}
+
+#hero {
+
+}
+
+#hero img.backdrop {
+
+}
+
+#hero img.poster {
+	width: 100%;
+}
+
+#hero #filmInfo {
+	margin-top: 100px;
 }

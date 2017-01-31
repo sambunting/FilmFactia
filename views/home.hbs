@@ -1,39 +1,41 @@
-<p>This is a website which I have spent a few days working on. It obviously needs to more work on it. I'm just happy that I have managed to make something in Node.js if I'm being honest.</p>
+<main>
+	<p>This is a website which I have spent a few days working on. It obviously needs to more work on it. I'm just happy that I have managed to make something in Node.js if I'm being honest.</p>
 
-<h3>Popular Movies</h3>
-<div id="popularMovies">
-	<div class="slidee">
-		{{#each popular}}
+	<h3>Popular Movies</h3>
+	<div id="popularMovies">
+		<div class="slidee">
+			{{#each popular}}
+					<li class="poster">
+						<a href="movie/{{this.id}}/">
+							<img src="http://image.tmdb.org/t/p/w185/{{this.poster_path}}">
+						</a>
+					</li>
+			{{else}}
+				<p>List is empty</p>
+			{{/each}}
+		</div>
+	</div>
+
+	<div class="scrollbar" id="popularMoviesScrollbar">
+	    <div class="handle"></div>
+	</div>
+
+	<h3>New Releases</h3>
+	<div id="newMovies">
+		<div class="slidee">
+			{{#each new}}
 				<li class="poster">
 					<a href="movie/{{this.id}}/">
 						<img src="http://image.tmdb.org/t/p/w185/{{this.poster_path}}">
 					</a>
 				</li>
-		{{else}}
-			<p>List is empty</p>
-		{{/each}}
+			{{else}}
+				<p>List is empty</p>
+			{{/each}}
+		</div>
 	</div>
-</div>
 
-<div class="scrollbar" id="popularMoviesScrollbar">
-    <div class="handle"></div>
-</div>
-
-<h3>New Releases</h3>
-<div id="newMovies">
-	<div class="slidee">
-		{{#each new}}
-			<li class="poster">
-				<a href="movie/{{this.id}}/">
-					<img src="http://image.tmdb.org/t/p/w185/{{this.poster_path}}">
-				</a>
-			</li>
-		{{else}}
-			<p>List is empty</p>
-		{{/each}}
+	<div class="scrollbar" id="newMoviesScrollbar">
+	    <div class="handle"></div>
 	</div>
-</div>
-
-<div class="scrollbar" id="newMoviesScrollbar">
-    <div class="handle"></div>
-</div>
+</main>

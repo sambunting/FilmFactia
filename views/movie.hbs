@@ -1,5 +1,35 @@
-<h1>{{data.title}}</h1>
+<div id="hero">
+	{{!-- <img class="backdrop" src="http://image.tmdb.org/t/p/w1920/{{data.backdrop_path}}"> --}}
 
-<img src="http://image.tmdb.org/t/p/w370/{{data.poster_path}}">
+	<div id="filmInfo" class="row">
+		<div class="small-4 columns">
+			<img class="poster" src="http://image.tmdb.org/t/p/w370/{{data.poster_path}}">
+		</div>
+		<div class="small-8 columns">
+			<h1>{{data.title}}</h1>
+			<p>{{data.overview}}</p>
 
-<p>{{data.overview}}</p>
+			<table>
+				<tr>
+					<td>Runtime</td>
+					<td>{{data.runtime}} Minutes</td>
+				</tr>
+
+				<tr>
+					<td>Status</td>
+					<td>{{data.status}}</td>
+				</tr>
+
+				<tr>
+					<td>Release Date</td>
+					<td>{{data.release_date}}</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+</div>
+
+<main>
+	
+</main>
