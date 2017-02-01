@@ -77,3 +77,8 @@ footer {
 #hero #filmInfo {
 	margin-top: 100px;
 }
+
+.cast-list {
+	height: 160px;
+	overflow: hidden;
+}

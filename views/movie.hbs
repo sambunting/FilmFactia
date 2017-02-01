@@ -24,12 +24,56 @@
 					<td>Release Date</td>
 					<td>{{data.release_date}}</td>
 				</tr>
-
 			</table>
-		</div>
+
+			<div class="row expanded">
+				<div class="medium-6 columns">
+					<h3>Film Cast</h3>
+
+					<div id="cast-cast">
+						<div class="cast-list">
+							{{#each credits.cast}}
+								<p><b>{{this.character}}</b> - {{this.name}}</p>
+							{{/each}}
+						</div>
+				
+						<a>View Full Crew</a>
+					</div>
+				</div>
+				<div class="medium-6 columns">
+					<h3>Film Crew</h3>
+
+					<div id="cast-crew">
+						<div class="cast-list">
+							{{#each credits.crew}}
+								<p><b>{{this.job}}</b> - {{this.name}}</p>
+							{{/each}}
+						</div>
+				
+						<a>View Full Crew</a>
+					</div>
+				</div>
+			</div>	
+		</div>	
 	</div>
 </div>
 
 <main>
+	<div class="row">
+		<h3>Videos</h3>
+	
+		{{#each video.results}}
+			{{#if_eq this.site "YouTube"}}
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/{{this.key}}" frameborder="0" allowfullscreen></iframe>
+			{{else}}
+				{{!-- Do nothing --}}
+			{{/if_eq}}
+		{{/each}}
+
+		<br><br>
+
+		<small>Yes of course I'm going to make this look pretty.</small>
+	</div>
+
 	
 </main>

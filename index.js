@@ -24,6 +24,7 @@ app.set('view engine', '.hbs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(__dirname + '/views'));
 
+
 var popularMovies;
 var released;
 
@@ -47,25 +48,47 @@ app.get('/', (request, response) => { // This view isn't working as well as it c
 	}).discoverMovie({'primary_release_date.gte': '2017-01-15', 'primary_release_date.lte' : '2017-01-22'}, (err, res) => {
 		callbackReleased(res.results)
 	})
-
-	
 })
 
 app.get('/movie/:id', (request, response) => {
 	var movieInfo;
+	var movieCredits;
+	var movieVideo;
 
-	function callback (data) {
+	function callbackInfo (data) {
 		movieInfo = data;
 	};
 
-	moviedb.movieInfo({id: request.params.id}, (err, res) => {
-		callback(res);
+	function callbackCredits (data) {
+		movieCredits = data;
+	};
 
-		response.render('movie', {
-			data: movieInfo,
-			moviePage: true,
-			pageName: movieInfo.title
-		})
+	function callbackVideo (data) {
+		movieVideo = data;
+	};
+
+	moviedb.movieInfo({id: request.params.id}, (err, res) => {
+		callbackInfo(res);
+
+		moviedb.movieCredits({id: request.params.id}, (err, res) => {
+			callbackCredits(res);
+
+			moviedb.movieVideos({id: request.params.id}, (err, res) => {
+				callbackVideo(res);
+
+				response.render('movie', {
+					data: movieInfo,
+					credits: movieCredits,
+					video: movieVideo,
+					moviePage: true,
+					pageName: movieInfo.title,
+
+					helpers: {
+						if_eq: function (a, b, opts) { if (a == b) return opts.fn(this); else { return opts.inverse(this)} }
+					}
+				})
+			});
+		});
 	})	
 });
 
