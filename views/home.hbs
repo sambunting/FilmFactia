@@ -1,6 +1,26 @@
-<main>
-	<p>This is a website which I have spent a few days working on. It obviously needs to more work on it. I'm just happy that I have managed to make something in Node.js if I'm being honest.</p>
+<div id="homeslider">
+	<a href="/movie/{{popular.0.id}}"><div class="slider-slide" style="background: url('http://image.tmdb.org/t/p/w1920/{{popular.0.backdrop_path}}'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+		<h4>Popular Now</h4>
+		<h3>{{popular.0.title}}</h3>
+	</div></a>
+{{!-- 
+	<a href="/movie/{{new.0.id}}"><div class="slider-slide" style="background: url('http://image.tmdb.org/t/p/w1920/{{new.0.backdrop_path}}'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+		<h4>Now Available</h4>
+		<h3>{{new.0.title}}</h3>
+	</div></a>
 
+	<a href="/movie/{{popular.0.id}}"><div class="slider-slide" style="background: url('http://image.tmdb.org/t/p/w1920/{{popular.1.backdrop_path}}'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+		<h4>Popular Now</h4>
+		<h3>{{popular.1.title}}</h3>
+	</div></a>
+
+	<a href="/movie/{{new.0.id}}"><div class="slider-slide" style="background: url('http://image.tmdb.org/t/p/w1920/{{new.1.backdrop_path}}'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+		<h4>Now Available</h4>
+		<h3>{{new.1.title}}</h3>
+	</div></a> --}}
+</div>
+
+<main>
 	<h3>Popular Movies</h3>
 	<div id="popularMovies">
 		<div class="slidee">

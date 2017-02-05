@@ -72,7 +72,7 @@ app.get('/movie/:id', (request, response) => {
 
 		moviedb.movieCredits({id: request.params.id}, (err, res) => {
 			callbackCredits(res);
-
+			
 			moviedb.movieVideos({id: request.params.id}, (err, res) => {
 				callbackVideo(res);
 

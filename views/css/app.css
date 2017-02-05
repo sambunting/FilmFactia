@@ -1,6 +1,24 @@
+a {
+	color: #009688;
+	text-decoration: underline;
+
+	transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+}
+
+a:hover {
+	color: #004D40;
+}
+
 header {
-	background-color: rgba(33, 33, 33, 0.8);
-	color: #ffffff;
+	background-color: rgba(255, 255, 255, 0.8);
+	color: #424242;
+	border-bottom: 3px solid #009688;
+}
+
+header a {
+	text-decoration: none;
 }
 
 header h2 {
@@ -11,11 +29,11 @@ header form input {
 	margin-top: 9px !important;
 	margin-bottom: 0 !important;
 
-	color: #ffffff !important;
+	font-size: 22px !important;
+	color: #009688 !important;
 	background-color: rgba(0,0,0,0) !important; 
 	background: rgba(0,0,0,0) !important;
 	border: none !important;
-	border-bottom: 3px solid #ffffff !important;
 	box-shadow: none !important;
 }
 
@@ -28,7 +46,41 @@ main {
 }
 
 footer {
+	background-color: #009688;
+	color: #ffffff;
+
 	text-align: center;
+	padding: 20px 20px;
+}
+
+footer a {
+	color: inherit;
+}
+
+footer a:hover {
+	color: #cccccc;
+}
+
+#homeslider {
+	height: 500px;
+	overflow: hidden;
+}
+
+#homeslider .slider-slide {
+	height: 500px;
+}
+
+#homeslider .slider-slide h4, #homeslider .slider-slide h3 {
+	background-color: #009688;
+	padding: 5px 10px;
+	position: absolute;
+	top: 400px;
+	color: #ffffff;
+	margin-left: 20px;
+}
+
+#homeslider .slider-slide h3 {
+	top: 445px;
 }
 
 #popularMovies, #newMovies { 
@@ -51,15 +103,34 @@ footer {
 	height: 100%; 
 }
 
+#popularMovies:hover + .scrollbar .handle {
+	opacity: 1;
+}
+
+#newMovies:hover + .scrollbar .handle {
+	opacity: 1;
+}
+
 .scrollbar { 
+	margin-top: -15px;
+	margin-bottom: 15px;
+
 	width: 100%; 
 	height: 10px; 
+
+
 }
 
 .scrollbar .handle {
     width: 100px; /* overriden if dynamicHandle: 1 */
     height: 100%;
     background: #222;
+    border-radius: 5px;
+	opacity: 0;
+
+	transition: opacity 0.2s ease;
+	-moz-transition: opacity 0.2s ease;
+	-webkit-transition: opacity 0.2s ease;
 }
 
 #hero {
