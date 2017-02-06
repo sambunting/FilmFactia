@@ -1,7 +1,13 @@
 <main>
-	{{#each results}}
-		<a href="../movie/{{this.id}}/"><p>{{this.title}}</p></a>
-	{{else}}
-		<p>List is empty</p>
-	{{/each}}
+	<div id="search-results">
+		{{#each results}}
+			<a href="../movie/{{this.id}}/"><div class="search-result">
+				<img src="http://image.tmdb.org/t/p/w370/{{this.poster_path}}">
+
+				<p>{{this.title}}</p>
+			</div></a>
+		{{else}}
+			<p>List is empty</p>
+		{{/each}}
+	</div>
 </main>

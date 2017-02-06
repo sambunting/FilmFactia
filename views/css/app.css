@@ -83,6 +83,8 @@ footer a:hover {
 	top: 445px;
 }
 
+
+
 #popularMovies, #newMovies { 
 	width: 100%; 
 	padding: 0; 
@@ -101,6 +103,10 @@ footer a:hover {
 	padding: 0; 
 	width: 185px; 
 	height: 100%; 
+}
+
+#popularMovies, #newMovies img {
+	height: 278px;
 }
 
 #popularMovies:hover + .scrollbar .handle {
@@ -152,4 +158,19 @@ footer a:hover {
 .cast-list {
 	height: 160px;
 	overflow: hidden;
+}
+
+#search-results {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.search-result {
+	width: 185px;
+	margin: 5px;
+}
+
+.search-result img {
+	height: 277.5px;
 }
