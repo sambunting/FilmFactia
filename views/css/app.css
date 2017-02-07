@@ -61,29 +61,28 @@ footer a:hover {
 	color: #cccccc;
 }
 
-#homeslider {
+.homeslider {
 	height: 500px;
 	overflow: hidden;
 }
 
-#homeslider .slider-slide {
+.homeslider div {
 	height: 500px;
 }
 
-#homeslider .slider-slide h4, #homeslider .slider-slide h3 {
+
+.homeslider div h4, .homeslider div h3 {
 	background-color: #009688;
 	padding: 5px 10px;
 	position: absolute;
-	top: 400px;
+	top: 350px;
 	color: #ffffff;
 	margin-left: 20px;
 }
 
-#homeslider .slider-slide h3 {
-	top: 445px;
+.homeslider div h3 {
+	top: 395px;
 }
-
-
 
 #popularMovies, #newMovies { 
 	width: 100%; 

@@ -1,5 +1,11 @@
 $(document).foundation()
 
+$('.homeslider').slick({
+	autoplay: true,
+	autoplaySpeed: 5000,
+	arrows : false
+});
+
 $("#movie_search").on('keyup', function (e) {
 	console.log(e.keyCode);
 
