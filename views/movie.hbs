@@ -7,6 +7,17 @@
 		</div>
 		<div class="small-8 columns">
 			<h1>{{data.title}}</h1>
+
+			<div class="row expanded">
+				<div class="medium-12 columns">
+					{{#each data.genres}}
+						<p class="film-tag">{{this.name}}</p>
+					{{/each}}
+				</div>
+			</div>
+			
+			<br>
+
 			<p>{{data.overview}}</p>
 
 			<table>
@@ -25,6 +36,8 @@
 					<td>{{data.release_date}}</td>
 				</tr>
 			</table>
+
+			
 
 			<div class="row expanded">
 				<div class="medium-6 columns">

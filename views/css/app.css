@@ -173,3 +173,10 @@ footer a:hover {
 .search-result img {
 	height: 277.5px;
 }
+
+.film-tag {
+	display: inline;
+	background-color: #009688;
+	color: #ffffff;
+	padding: 5px 10px;
+}

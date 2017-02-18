@@ -93,15 +93,12 @@ app.get('/movie/:id', (request, response) => {
 });
 
 app.get('/search/:query', (request, response) => {
-
 	moviedb.searchMovie({query: request.params.query }, function(err, res){
 		response.render('search', {
 			searchQuery: request.params.query,
 			results: res.results
 		})
 	});
-
-	
 });
 
 app.listen(3000);
