@@ -96,9 +96,50 @@ app.get('/search/:query', (request, response) => {
 	moviedb.searchMovie({query: request.params.query }, function(err, res){
 		response.render('search', {
 			searchQuery: request.params.query,
-			results: res.results
+			results: res.results,
+			pageName: "Search"
 		})
 	});
+});
+
+var genres = {
+	"Action": 28,
+	"Adventure": 12,
+	"Animation": 16,
+	"Comedy": 35,
+	"Crime": 80,
+	"Documentary": 99,
+	"Drama": 18,
+	"Family": 10751,
+	"Fantasy": 14,
+	"History": 36,
+	"Horror": 27,
+	"Music": 10402,
+	"Mystery": 9648,
+	"Romance": 10749,
+	"Science Fiction": 878,
+	"TV Movie": 10770,
+	"Thriller": 53,
+	"War": 10752,
+	"Western": 37
+};
+
+app.get('/genre/:genre', (request, response) => {
+	for (var key in genres) {
+		if (genres.hasOwnProperty(key)){
+			if (key == request.params.genre) {
+				var genreText = key;
+
+				moviedb.genreMovies({id: genres[key] }, function(err, res){
+					response.render('search', {
+						searchQuery: genreText,
+						results: res.results,
+						pageName: "Search"
+					})
+				});
+			} 
+		}
+	}
 });
 
 app.listen(3000);

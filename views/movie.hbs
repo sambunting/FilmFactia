@@ -11,7 +11,7 @@
 			<div class="row expanded">
 				<div class="medium-12 columns">
 					{{#each data.genres}}
-						<p class="film-tag">{{this.name}}</p>
+						<a href="/genre/{{this.name}}"><p class="film-tag">{{this.name}}</p></a>
 					{{/each}}
 				</div>
 			</div>
