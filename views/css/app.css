@@ -49,8 +49,25 @@ footer {
 	background-color: #009688;
 	color: #ffffff;
 
-	text-align: center;
-	padding: 20px 20px;
+	padding: 20px 0px;
+}
+
+footer ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 10px;
+	margin-right: 50px;
+	float: left;
+}
+
+footer img {
+	width: 200px;
+	margin-top: 50px;
+}
+
+footer .row {
+	margin-bottom: 20px;
 }
 
 footer a {
