@@ -1,8 +1,8 @@
-# UnamedMovieWebsite
+# FilmFactia
 
-This is a website which I have spent a whole evening on. At the moment, it only shows popular movies, so it obviously needs to more work on it. I'm just happy that I have managed to make something in Node.js if I'm being honest.
+This is a website, a bit like IMDb, which shows you information on released and upcoming films. It is by no means finished, as there is always room for improvement.
 
-It's so unnamed, I havent even bought a domian for it [http://139.59.168.66:3000/](http://139.59.168.66:3000/)
+[filmfactia.com](http://filmfactia.com)
 
 ##Technologys Used
 
