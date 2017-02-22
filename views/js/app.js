@@ -15,7 +15,7 @@ $("#movie_search").on('keyup', function (e) {
 		if (location.hostname == "localhost") {
 			window.location = "http://localhost:3000/search/" + searchVal;
 		} else {
-			window.location = "http://" + location.hostname + ":3000/search/" + searchVal; //The 3000 Port is just for my current domainless web server. Someone remind me to change it when I register one. 
+			window.location = "http://" + location.hostname + "/search/" + searchVal;
 		}
 	}	
 })
