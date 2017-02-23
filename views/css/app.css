@@ -22,19 +22,59 @@ header a {
 }
 
 header h2 {
+	padding: 0;
 	margin: 0;
 }
 
+header .nav {
+
+}
+
+header .nav {
+	float: left;
+	display: inline-flex;
+	align-items: center;
+}
+
+header .nav a {
+	display: block;
+	padding: 15px 20px;
+}
+
+header .nav a:first-child {
+	font-size: 36px;
+	padding: 0px 20px;
+}
+
+header .nav a:hover .mega-content {
+	display: block;
+}
+
+header .mega-content {
+	border-top: 1px solid #cccccc;
+	border-bottom: 3px solid #009688;
+	margin-top: 15px !important;
+	padding: 0px 20px;
+	background-color: #ffffff;
+	display: none;
+
+	position: absolute;
+	left: 0;
+	width: 100%;
+	z-index: 99999;
+}
+
 header form input {
-	margin-top: 9px !important;
 	margin-bottom: 0 !important;
 
-	font-size: 22px !important;
+	font-size: 36px !important;
 	color: #009688 !important;
 	background-color: rgba(0,0,0,0) !important; 
 	background: rgba(0,0,0,0) !important;
 	border: none !important;
 	box-shadow: none !important;
+	width: 100% !important;
+	height: 100px !important;
 }
 
 header form input:focus {

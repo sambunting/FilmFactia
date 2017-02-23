@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Movie Website - {{pageName}}</title>
+		<title>FilmFactia - {{pageName}}</title>
 
 		<link rel="stylesheet" href="css/foundation.css">
     	<link rel="stylesheet" href="css/app.css">
@@ -30,15 +30,21 @@
 
 	</head>
 	<body>
-		<header class="row expanded">
-			<div class="large-4 columns">
-				<a href="/"><h2>FilmFactia</h2></a>
-			</div>
 
-			<div class="large-8 columns">
-				<form>
-					<input type="text" name="movie_search" value="{{searchQuery}}" id="movie_search" placeholder="Search films">
-				</form>
+		<header class="row expanded">
+			<nav class="nav clearfix">
+				<a href="/">FilmFactia</a>
+				<a>Search
+					<div class="mega-content">
+						<form>
+							<input type="text" name="movie_search" value="{{searchQuery}}" id="movie_search" placeholder="Search films">
+						</form>
+					</div>
+				</a>
+			</nav>
+				
+			<div id="mega-nav">
+				
 			</div>
 		</header>
 

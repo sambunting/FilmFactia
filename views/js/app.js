@@ -13,7 +13,7 @@ $("#movie_search").on('keyup', function (e) {
 		e.preventDefault();
 		var searchVal = $("#movie_search").val();
 		if (location.hostname == "localhost") {
-			window.location = "http://localhost:3000/search/" + searchVal;
+			window.location = "http://localhost/search/" + searchVal;
 		} else {
 			window.location = "http://" + location.hostname + "/search/" + searchVal;
 		}
