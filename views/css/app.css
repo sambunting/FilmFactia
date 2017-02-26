@@ -81,6 +81,16 @@ header form input:focus {
 	box-shadow: none !important;
 }
 
+header .mega-content {
+	color: #0a0a0a;
+}
+
+header .mega-content .mega-content-container {
+	padding-top: 10px;
+	width: 80%;
+	margin: 0 auto;
+}
+
 main {
 	padding: 20px;
 }

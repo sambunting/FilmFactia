@@ -3,7 +3,11 @@
 
 	<div id="filmInfo" class="row">
 		<div class="small-4 columns">
-			<img class="poster" src="http://image.tmdb.org/t/p/w370/{{data.poster_path}}">
+			{{#if this.poster_path}}
+				<img src="http://image.tmdb.org/t/p/w370/{{this.poster_path}}">
+			{{else}}
+				<img src="/img/not-found-large.png">
+			{{/if}}
 		</div>
 		<div class="small-8 columns">
 			<h1>{{data.title}}</h1>

@@ -1,10 +1,19 @@
 <main>
-	<h3>Showing results for {{searchQuery}}</h3>
+		
+	{{#if genre}}
+		<h3>Showing {{searchQuery}} films</h3>
+	{{else}}
+		<h3>Showing results for "{{searchQuery}}"</h3>
+	{{/if}}
 
 	<div id="search-results">
 		{{#each results}}
 			<a href="../movie/{{this.id}}/"><div class="search-result">
-				<img src="http://image.tmdb.org/t/p/w370/{{this.poster_path}}">
+				{{#if this.poster_path}}
+					<img src="http://image.tmdb.org/t/p/w185/{{this.poster_path}}">
+				{{else}}
+					<img src="/img/not-found-small.png">
+				{{/if}}
 
 				<p>{{this.title}}</p>
 			</div></a>
